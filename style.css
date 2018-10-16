@@ -26,14 +26,14 @@ body{
 
 }
 
-
-@media only screen and (min-width: 992px){
+/*
+@media only screen and (max-width: 992px){
 	.cont2{
 	
 	padding-left: 40%;
 	  }
 	  
-}
+}*/
 
 @media only screen and (min-width: 768px){
 	.cont2{
@@ -88,19 +88,29 @@ body{
 }
 .btnRabt{
 	margin-left: 25%;
-	height: 40px;
-	margin-top: -5px;
+	height: 50px;
+	margin-top: -10px;
 }
 .btnRabt span{
 	color:#ee8b19;
-	font-size: 22px;
 }
-.btnRabt img {
-	padding-top: 0px;
-	
+
+.btnRabt i{
+ margin-top: -5px;
+margin-left: 15px;
+padding: 6px 2px;
+background:#ee8b19;
+color: #fff;
 }
 .btnRabt-row{
   display: none;
+}
+.btnRabt-row i{
+	 margin-top: -5px;
+	margin-left: 15px;
+	padding: 6px 2px;
+	background:#ee8b19;
+	color: #fff;
 }
 
 @media only screen and (max-width: 600px){
@@ -186,3 +196,8 @@ input[type="text"]:focus{
 
 
 /*End Bottom Navbars*/
+
+
+
+
+
