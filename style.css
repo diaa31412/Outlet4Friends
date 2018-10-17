@@ -241,20 +241,41 @@ input[type="text"]:focus{
 	text-decoration: none;
 }
 .centered-buton-women{
-	background-color: #F4F5F7;
-	opacity: 0.3;
+
 	position: absolute;
 	top: 63%;
 	left: 55%;
 	width: 250px;
 	height: 40px;
-	color: black;
+	color: white;
 	padding-left: 30px;
 	padding-top: 7px;
 	border: 1px solid white;
 }
 .centered-buton-women:hover{
-	color: black;
+	color: white;
 	text-decoration: none;
+}
+@media only screen and (max-width: 1200px){
+    .centered-buton-man{
+
+		}
+		.centered-buton-women{
+      top: 74%;
+			left: 18%;
+		}
+}
+
+
+
+@media only screen and (max-width: 768px){
+	.centered-buton-man{
+		top: 63%;
+		left: 8%;
+	}
+	.centered-buton-women{
+		top: 63%;
+		left: 55%;
+	}
 }
 /* End style first row brand */
