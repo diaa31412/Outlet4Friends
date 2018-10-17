@@ -1,0 +1,836 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"b86c2e277a","applicationID":"101113117","transactionName":"cVoNQkVeWltcRRlFEV1HClNEHkVfVkA=","queueTime":0,"applicationTime":71,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  <meta name="ROBOTS" content="NOODP" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="fb:pages" content="168045923617234" />
+  <!-- START Google Analytics -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-87667366-5', 'auto');
+    ga('send', 'pageview');
+  </script>
+<!-- END Google Analytics -->
+
+    <script>
+    (function(w,d) {
+      w.kwa || (w.kwa = function() {
+        (w.kwa.q = w.kwa.q || []).push(arguments);
+      });
+      se = d.createElement('script'),
+      fs = d.scripts[0];
+      se.src = '//cdn.keywee.co/dist/analytics.min.js';
+      fs.parentNode.insertBefore(se,fs)
+    }(window, document));
+  </script>
+
+    <meta name="generator" content="Thrive Global" />
+<meta name="description" content="Understanding your boss&#39; cryptic comments depends a lot on the context of the conversation and the relationship you have with them." />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@thrive" />
+<meta property="og:url" content="https://www.thriveglobal.com/stories/18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="How to Decode Confusing Phrases From Your Boss" />
+<meta property="og:description" content="This is how to understand your boss&#39; communication style without driving yourself crazy " />
+<meta property="og:image" content="https://s3.amazonaws.com/skinner-production/stories/display_images/000/018/442/large/hunters-race-408744.jpg?1516304279" />
+<link rel="canonical" href="https://www.businessinsider.com/what-your-boss-means-2017-11/#i-need-you-to-be-a-team-player-6" />
+
+
+
+  <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Thrive Global",
+            "logo": "https://www.thriveglobal.com/assets/thrive-global-wordmark-only.png"
+        },
+        "author": [
+            {
+              "@type": "Person",
+              "name": "Business Insider",
+                "image": {
+                  "@type": "ImageObject",
+                  "url": "https://s3.amazonaws.com/skinner-production/authors/headshots/000/004/312/large/Screen_Shot_2018-07-10_at_9.58.15_AM.png?1531231147",
+                  "width": 500,
+                  "height": 500
+                },
+              "description": ""
+            }
+        ],
+        "headline": "13 Mysterious Code Words Your Boss Uses — And What They Really Mean",
+        "url": "https://www.thriveglobal.com/stories/18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean",
+        "datePublished": "2018-01-19T08:00:01-05:00",
+        "dateModified": "2018-01-19T08:00:01-05:00",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://s3.amazonaws.com/skinner-production/stories/featured_images/000/018/442/preview/hunters-race-408744.jpg?1512589970",
+            "width": 800,
+            "height": 480
+        },
+        "description": "Understanding your boss&#39; cryptic comments depends a lot on the context of the conversation and the relationship you have with them.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.thriveglobal.com"
+        },
+        "keywords": ["relationships","performance","corporate","career_advice","category:work_smarter"]
+    }
+</script>
+
+
+  <title>13 Mysterious Code Words Your Boss Uses — And What They Really Mean | Thrive Global</title>
+  <link rel="stylesheet" media="all" href="https://www.thriveglobal.com/assets/application-6134ebdbb1e014ffeba5f09bcb89fa312b065169830af3ef33aba1e7a457a49a.css" />
+  <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Playfair+Display:400i,700,900" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="KZaT8JtFdsN0Ffp5dv0QogvOA3lxQt5SOannYFt+s2Wk6qZtgeVzUTfDsj6S6/uvKcJ4ZPL2kkDKAWRiop+9Vw==" />
+  <script async="async" src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+  <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+  </script>
+  <script>
+    googletag.cmd.push(function() {
+
+    var mappingHeaderBranded = googletag.sizeMapping().
+      addSize([901, 0], [3000, 200]).
+      addSize([0, 0], [900, 100]). // default
+      build();
+
+    var mappingFooterBranded = googletag.sizeMapping().
+      addSize([640, 0], [528, 96]).
+      addSize([0, 0], [320, 58]). // default
+      build();
+
+    var mappingUnbranded = googletag.sizeMapping().
+      addSize([1024, 0], [600, 163]).
+      addSize([640, 0], [400, 109]).
+      addSize([400, 0], [300, 82]).
+      addSize([0, 0], [250, 68]). // default
+      build();
+
+      googletag.defineSlot('/1153351198/Branded_Category_Header', [[3000, 200], [900, 100]], 'div-gpt-ad-1495319429582-1')
+        .defineSizeMapping(mappingHeaderBranded)
+        .addService(googletag.pubads());
+      googletag.defineSlot('/1153351198/Branded_Category_Footer', [[528, 96], [320, 58]], 'div-gpt-ad-1495319429582-0')
+        .defineSizeMapping(mappingFooterBranded)
+        .addService(googletag.pubads());
+      googletag.defineSlot('/1153351198/Un-branded_Category_Header',
+        [[600, 163], [400, 109], [300, 82], [250, 68]], 'div-gpt-ad-1495368159562-2')
+        .defineSizeMapping(mappingUnbranded)
+        .addService(googletag.pubads());
+
+      googletag.pubads().enableSingleRequest();
+      googletag.pubads().collapseEmptyDivs();
+      googletag.enableServices();
+    });
+  </script>
+</head>
+<body class="stories stories-show">
+  <div class="app-layout">
+    <div class="banner-header__container">
+  <div class="banner-header--small">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <div class="mdl-layout__logo">
+            <a class="banner-header__logo-link" href="/"><img class="banner-header__logo--small" src="https://www.thriveglobal.com/assets/logo-new-nav-c009a9da684c6e06c112d35d230467b85e82088e72f11aa81457e0ac3b25f1dc.png" alt="Logo new nav" /></a>
+          </div>
+          <nav class="mdl-navigation">
+            <span class="banner-header--mobile">
+              <span class="story-search__mobile"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" class="primary-navigation__item--search-icon primary-navigation__item--search-icon js-open-story-search story-search__mobile">
+    <defs></defs>
+    <g id="Article-Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search-enabled" transform="translate(-947.000000, -141.000000)" fill-rule="nonzero" fill="#ACADAE">
+            <path d="M953.251933,141.176385 C949.911101,141.176385 947.177693,143.871382 947.177693,147.172911 C947.177693,150.474439 949.911101,153.17569 953.251933,153.17569 C954.536382,153.17569 955.725921,152.769251 956.706658,152.093939 L959.990544,155.332938 C960.408148,155.751882 961.0915,155.751882 961.509104,155.332938 C961.926708,154.920247 961.926708,154.251188 961.509104,153.838496 L958.225218,150.593244 C958.914897,149.617793 959.319847,148.442248 959.319847,147.172911 C959.319847,143.871382 956.586438,141.176385 953.251933,141.176385 Z M953.251933,143.289863 C955.428536,143.289863 957.17488,145.015662 957.17488,147.172911 C957.17488,149.330159 955.428536,151.055958 953.251933,151.055958 C951.069003,151.055958 949.322659,149.330159 949.322659,147.172911 C949.322659,145.015662 951.069003,143.289863 953.251933,143.289863 Z" id="icon-search-smaller"></path>
+        </g>
+    </g>
+</svg>
+
+</span>
+            </span>
+            <span class="banner-header--desktop">
+                <div class="mdl-layout__content">
+  <ul>
+    <li class="primary-navigation__item">
+      <a class="primary-navigation__link" href="/sign_in">Log in</a>
+    </li>
+    <span>/</span>
+    <li class="primary-navigation__item">
+      <a class="primary-navigation__link" href="/sign_up">Sign up</a>
+    </li>
+  </ul>
+</div>
+
+            </span>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+  <nav class="mdl-navigation">
+    <div class="drawer-menu__sections drawer-menu__sections--user">
+        <a class="mdl-navigation__link primary-navigation__link" href="/sign_in">Log in</a>
+<a class="mdl-navigation__link primary-navigation__link" href="/sign_up">Sign up</a>
+
+    </div>
+    <div class="drawer-menu__sections">
+        <a class="mdl-navigation__link primary-navigation__link" href="/categories/well-being">Well-Being</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/categories/wisdom">Wisdom</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/categories/wonder">Wonder</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/categories/purpose">Purpose</a>
+      <div data-special-sections-trigger data-special-sections-dropdown-trigger class="drawer-menu__dropdown-item mdl-navigation__link primary-navigation__link">
+        Special Sections
+        <span data-special-sections-dropdown-target class="drawer-menu__dropdown-icon closed"></span>
+      </div>
+      <div data-special-sections-target class="drawer-menu__dropdown hidden">
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/work-smarter">Work Smarter</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/unplug-recharge">Unplug &amp; Recharge</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/time-well-spent">Time Well Spent</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/asking-for-a-friend">Asking for a Friend</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/brain-health">Brain Health</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/human-revolution">Human Revolution</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/mental-health-at-work">Mental Health at Work</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/mindful-screening">Mindful Screening</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/second-acts">Second Acts</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/shabbat-a-day-of-rest">Shabbat: A Day of Rest</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/social-health">Social Health</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/technology-humanity">Technology and Humanity</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/the-psychology-of-what-we-wear-to-work">The Psychology of What We Wear to Work</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/the-thrive-questionnaire">The Thrive Questionnaire</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/thrive-india">Thrive India</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/thrive-on-campus">Thrive on Campus</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/podcasts">Thrive Podcasts</a>
+          <a class="mdl-navigation__link primary-navigation__link" href="/categories/wellbeing-and-social-change">Wellbeing and Social Change</a>
+      </div>
+      <a class="mdl-navigation__link primary-navigation__link" href="/community">Community</a>
+    </div>
+    <div class="drawer-menu__sections">
+      <div data-corporate-offerings-trigger data-corporate-dropdown-trigger class="drawer-menu__dropdown-item mdl-navigation__link primary-navigation__link">
+        Corporate Offerings
+        <span data-corporate-dropdown-target class="drawer-menu__dropdown-icon closed"></span>
+      </div>
+      <div data-corporate-offerings-target class="drawer-menu__dropdown hidden">
+        <a class="mdl-navigation__link primary-navigation__link" href="/about/corporate">Corporate Partnerships</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/about/content">Media Partnerships</a>
+      </div>
+      <div data-about-thrive-trigger data-about-dropdown-trigger class="drawer-menu__dropdown-item mdl-navigation__link primary-navigation__link">
+        About Thrive
+        <span data-about-dropdown-target class="drawer-menu__dropdown-icon closed"></span>
+      </div>
+      <div data-about-thrive-target class="drawer-menu__dropdown hidden">
+        <a class="mdl-navigation__link primary-navigation__link" href="/about">Our Mission</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/press">Press</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/apps">Apps</a>
+        <a class="mdl-navigation__link primary-navigation__link" href="/team">Team</a>
+      </div>
+    </div>
+  </nav>
+</div>
+
+    </div>
+  </div>
+</div>
+
+    <nav class="primary-navigation--app__container">
+  <a class="primary-navigation--mobile__logo" href="/">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757.4 387.5">
+  <title>Thrive Global</title>
+  <g class="logo__thrive-lettering" fill="#111">
+    <polygon points="225,188.3 159.9,188.3 159.9,193.7 225,193.7 225,253.4 230.6,253.4 230.6,132.2 225,132.2"></polygon>
+    <rect x="130.2" y="132.2" width="5.6" height="121.2"></rect>
+    <rect y="132.2" width="94.8" height="5.4"></rect>
+    <rect x="44.6" y="161.1" width="5.6" height="92.3"></rect>
+    <path d="M331,213.6c23,0,41.8-18.3,41.8-40.7s-18.8-40.7-41.8-40.7h-52.1v121.2h5.6V137.6H331 c20.1,0,36.3,15.7,36.3,35.3c0,19.5-16.2,35.3-36.3,35.3h-23.3l57.6,45.2h9.3l-51.5-39.8H331z"></path>
+    <rect x="631.3" y="188.3" width="55.8" height="5.4"></rect>
+    <polygon points="601.5,132.2 601.5,253.4 687.1,253.4 687.1,248 607.1,248 607.1,137.6 687.1,137.6 687.1,132.2"></polygon>
+    <rect x="411.9" y="132.2" width="5.6" height="121.2"></rect>
+    <polygon points="510.4,244.3 457,132.2 450.9,132.2 509.5,255.2 511.3,255.2 569.9,132.2 563.7,132.2 "></polygon>
+  </g>
+  <g class="logo__global-lettering" fill="#111">
+    <path d="M207.1,332.9h62.2c-0.8,23.7-19.9,42.1-43.9,42.1c-24.6,0-43.9-19.1-43.9-43.4s19.3-43.4,43.9-43.4 c13.5-0.1,26.3,6,34.7,16.5l1.1,1.4v-8.3l-0.2-0.2c-9.3-9.6-22.2-15-35.7-14.9c-27.3,0-49.5,21.9-49.5,48.8 c0,26.9,22.2,48.8,49.5,48.8c27.3,0,49.5-21.9,49.5-48.8v-4.1h-67.8V332.9z"></path>
+    <polygon points="302.1,284.1 296.5,284.1 296.5,379 361,379 361,373.6 302.1,373.6"></polygon>
+    <path d="M539.8,329.1c8.6-3.8,13.8-11.5,13.8-20.6c0-13.4-11.2-24.4-25-24.4h-44V379h50.6c14.7,0,26.7-11.6,26.7-25.8 C562,340.8,552.8,331,539.8,329.1z M535.5,373.6h-45.3v-84h38.4c10.7,0,19.5,8.5,19.5,19s-8.7,19-19.5,19l-14.3-0.1v5.4h21.2 c11.5,0,20.9,9.1,20.9,20.4S547,373.6,535.5,373.6z"></path>
+    <polygon points="698.5,373.6 698.5,284.1 692.9,284.1 692.9,379 757.4,379 757.4,373.6"></polygon>
+    <polygon points="622,282.7 576.2,379 582.3,379 623.1,293.2 650,349.8 621.8,349.8 619.2,355.2 652.6,355.2 663.8,378.6 664,379 670.1,379 624.3,282.7"></polygon>
+  </g>
+  <g class="logo__leaves" fill="#71cbd2">
+    <path d="M405.8,75.3c0,0.5-0.2,1-0.4,1.4l6.9,7.1c0.3-0.3,0.7-0.6,1.1-0.7V47.7c-0.8-0.4-1.5-1.1-1.6-2L398,31.5 c-0.3,0.1-0.5,0.2-0.8,0.2c-1.5,0-2.8-1.2-2.8-2.8c0,0,0,0,0,0c0-0.3,0.1-0.6,0.2-0.9l-14.8-15.1c-6.9,6-12,13.6-15.1,22.1l37,38 c0.4-0.3,0.9-0.4,1.4-0.4C404.6,72.6,405.8,73.8,405.8,75.3z M416.4,43.2l30.8-31.6c-9.1-7.3-20.3-11.3-32-11.5v42.5 C415.7,42.6,416.1,42.8,416.4,43.2z M399.9,28.9c0,0.5-0.2,1.1-0.5,1.5l12.8,13.1c0.3-0.4,0.7-0.8,1.2-1V0 c-11.7,0.2-23.1,4.3-32.2,11.7l14.5,14.9c0.4-0.3,0.9-0.4,1.4-0.5C398.7,26.1,399.9,27.4,399.9,28.9z M415.2,47.7v35.4 c0.4,0.2,0.8,0.4,1.1,0.8l18.9-19.4c-0.3-0.4-0.4-0.9-0.4-1.4c0-1.5,1.2-2.8,2.8-2.8l0,0c0.5,0,0.9,0.1,1.3,0.4l25-25.7 c-3.1-8.6-8.3-16.3-15.3-22.3L417.2,45c0,0,0,0.1,0,0.1C417.2,46.3,416.4,47.4,415.2,47.7z M411.5,85.7L411.5,85.7l-7.5-7.8 c-0.3,0.1-0.6,0.2-0.9,0.2c-1.5,0-2.8-1.2-2.8-2.7c0-0.4,0.1-0.7,0.2-1.1L364,36.9c-1.6,5.1-2.4,10.4-2.4,15.8 c0,28.5,36.6,66.3,51.8,67.8V88.3C412.3,87.9,411.5,86.9,411.5,85.7z M464.6,36.9L440.2,62c0.6,1.4,0,3-1.4,3.6 c-0.7,0.3-1.5,0.3-2.1,0L417,85.8c0,1.1-0.8,2.1-1.8,2.5v32.2c14.2-1.6,51.8-39.3,51.8-67.8C467,47.3,466.2,42,464.6,36.9z"></path>
+    <path d="M422.8,312.1c0-0.5,0.2-1,0.4-1.4l-6.9-7c-0.3,0.3-0.7,0.6-1.1,0.7v35.4c0.8,0.4,1.5,1.1,1.6,2l13.8,14.2 c0.3-0.1,0.5-0.2,0.8-0.2c1.5,0,2.8,1.2,2.8,2.8c0,0,0,0,0,0c0,0.3-0.1,0.6-0.2,0.9l14.7,15.1c6.8-5.9,12-13.6,15.1-22.1l-37-38 c-0.4,0.3-0.9,0.4-1.4,0.4C424,314.9,422.8,313.7,422.8,312.1z M412.2,344.3L381.4,376c9.1,7.3,20.3,11.3,32,11.5V345 C413,344.9,412.5,344.7,412.2,344.3z M428.7,358.6c0-0.5,0.2-1.1,0.5-1.5L416.4,344c-0.3,0.4-0.7,0.8-1.2,1v42.5 c11.7-0.2,23.1-4.3,32.2-11.7l-14.5-14.9c-0.4,0.3-0.9,0.4-1.4,0.5C429.9,361.4,428.7,360.1,428.7,358.6 C428.7,358.6,428.7,358.6,428.7,358.6z M413.4,339.8v-35.4c-0.4-0.2-0.8-0.4-1.1-0.8L393.4,323c0.3,0.4,0.4,0.9,0.4,1.4 c0,1.5-1.2,2.8-2.8,2.8c0,0,0,0,0,0c-0.5,0-0.9-0.1-1.3-0.4l-25,25.7c3.1,8.6,8.3,16.3,15.3,22.3l31.4-32.3c0,0,0-0.1,0-0.1 C411.4,341.2,412.2,340.1,413.4,339.8z M417.1,301.8L417.1,301.8l7.5,7.7c0.3-0.1,0.6-0.2,0.9-0.2c1.5,0,2.8,1.2,2.8,2.7 c0,0.4-0.1,0.7-0.2,1.1l36.4,37.4c1.6-5.1,2.4-10.4,2.4-15.8c0-28.5-36.6-66.3-51.8-67.8v32.2C416.4,299.5,417.1,300.6,417.1,301.8 z M364,350.6l24.5-25.1c-0.6-1.4,0-3,1.4-3.6c0.7-0.3,1.5-0.3,2.1,0l19.5-20.1c0-1.1,0.8-2.1,1.8-2.5V267 c-14.2,1.6-51.8,39.4-51.8,67.8C361.6,340.2,362.4,345.5,364,350.6z"></path>
+  </g>
+</svg>
+
+</a>  <a href="#" class="primary-navigation--mobile__menu" data-mobile-menu-trigger="true">
+    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" class="primary-navigation--mobile__menu-icon">
+  <path d="M0 0v1h8v-1h-8zm0 2.97v1h8v-1h-8zm0 3v1h8v-1h-8z" transform="translate(0 1)"></path>
+</svg>
+
+  </a>
+
+  <div class="primary-navigation--app--expanded" data-mobile-menu-target="true">
+    <ul class="primary-navigation__list">
+        <li class="primary-navigation__item">
+          <a class="primary-navigation__link" href="/categories/well-being">Well-Being</a>
+        </li>
+        <li class="primary-navigation__item">
+          <a class="primary-navigation__link" href="/categories/wisdom">Wisdom</a>
+        </li>
+        <li class="primary-navigation__item">
+          <a class="primary-navigation__link" href="/categories/wonder">Wonder</a>
+        </li>
+        <li class="primary-navigation__item">
+          <a class="primary-navigation__link" href="/categories/purpose">Purpose</a>
+        </li>
+      <li id="primary-navigation__dropdown" class="primary-navigation__item special-sections">
+        <a class="primary-navigation__link">Special Sections</a>
+        <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect" for="primary-navigation__dropdown">
+          <h2>Special Sections</h2>
+          <div class="dropdown__nav">
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/work-smarter">Work Smarter</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/unplug-recharge">Unplug &amp; Recharge</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/time-well-spent">Time Well Spent</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/asking-for-a-friend">Asking for a Friend</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/brain-health">Brain Health</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/human-revolution">Human Revolution</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/mental-health-at-work">Mental Health at Work</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/mindful-screening">Mindful Screening</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/second-acts">Second Acts</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/shabbat-a-day-of-rest">Shabbat: A Day of Rest</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/social-health">Social Health</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/technology-humanity">Technology and Humanity</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/the-psychology-of-what-we-wear-to-work">The Psychology of What We Wear to Work</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/the-thrive-questionnaire">The Thrive Questionnaire</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/thrive-india">Thrive India</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/thrive-on-campus">Thrive on Campus</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/podcasts">Thrive Podcasts</a>
+              </li>
+              <li class="mdl-menu__item primary-navigation__item">
+                <a class="primary-navigation__link" href="/categories/wellbeing-and-social-change">Wellbeing and Social Change</a>
+              </li>
+          </div>
+        </ul>
+      </li>
+      <li class="primary-navigation__item community-link">
+        <a class="primary-navigation__link" href="/community">Community</a>
+      </li>
+      <li class="primary-navigation__item">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" class="primary-navigation__item--search-icon primary-navigation__item--search-icon js-open-story-search story-search__mobile">
+    <defs></defs>
+    <g id="Article-Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search-enabled" transform="translate(-947.000000, -141.000000)" fill-rule="nonzero" fill="#ACADAE">
+            <path d="M953.251933,141.176385 C949.911101,141.176385 947.177693,143.871382 947.177693,147.172911 C947.177693,150.474439 949.911101,153.17569 953.251933,153.17569 C954.536382,153.17569 955.725921,152.769251 956.706658,152.093939 L959.990544,155.332938 C960.408148,155.751882 961.0915,155.751882 961.509104,155.332938 C961.926708,154.920247 961.926708,154.251188 961.509104,153.838496 L958.225218,150.593244 C958.914897,149.617793 959.319847,148.442248 959.319847,147.172911 C959.319847,143.871382 956.586438,141.176385 953.251933,141.176385 Z M953.251933,143.289863 C955.428536,143.289863 957.17488,145.015662 957.17488,147.172911 C957.17488,149.330159 955.428536,151.055958 953.251933,151.055958 C951.069003,151.055958 949.322659,149.330159 949.322659,147.172911 C949.322659,145.015662 951.069003,143.289863 953.251933,143.289863 Z" id="icon-search-smaller"></path>
+        </g>
+    </g>
+</svg>
+
+
+      </li>
+    </ul>
+  </div>
+
+  <div class="primary-navigation--app--collapsed">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15px" height="15px" viewBox="0 0 15 15" version="1.1" class="primary-navigation__item--search-icon primary-navigation__item--search-icon js-open-story-search story-search__mobile">
+    <defs></defs>
+    <g id="Article-Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search-enabled" transform="translate(-947.000000, -141.000000)" fill-rule="nonzero" fill="#ACADAE">
+            <path d="M953.251933,141.176385 C949.911101,141.176385 947.177693,143.871382 947.177693,147.172911 C947.177693,150.474439 949.911101,153.17569 953.251933,153.17569 C954.536382,153.17569 955.725921,152.769251 956.706658,152.093939 L959.990544,155.332938 C960.408148,155.751882 961.0915,155.751882 961.509104,155.332938 C961.926708,154.920247 961.926708,154.251188 961.509104,153.838496 L958.225218,150.593244 C958.914897,149.617793 959.319847,148.442248 959.319847,147.172911 C959.319847,143.871382 956.586438,141.176385 953.251933,141.176385 Z M953.251933,143.289863 C955.428536,143.289863 957.17488,145.015662 957.17488,147.172911 C957.17488,149.330159 955.428536,151.055958 953.251933,151.055958 C951.069003,151.055958 949.322659,149.330159 949.322659,147.172911 C949.322659,145.015662 951.069003,143.289863 953.251933,143.289863 Z" id="icon-search-smaller"></path>
+        </g>
+    </g>
+</svg>
+
+
+    <div class="dropdown primary-navigation__item">
+      <button class="dropdown__target dropdown__target--simple primary-navigation__link"
+      data-dropdown-trigger="categories" tabindex="0"%>
+        Categories
+      </button>
+      <ul class="dropdown__content dropdown__content--list"
+      data-dropdown-content="categories">
+          <li class="dropdown__list-item">
+            <a class="dropdown__link" href="/categories/well-being">Well-Being</a>
+          </li>
+          <li class="dropdown__list-item">
+            <a class="dropdown__link" href="/categories/wisdom">Wisdom</a>
+          </li>
+          <li class="dropdown__list-item">
+            <a class="dropdown__link" href="/categories/wonder">Wonder</a>
+          </li>
+          <li class="dropdown__list-item">
+            <a class="dropdown__link" href="/categories/purpose">Purpose</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="story-search">
+    <div class="story-search__search-container mdl-layout__content">
+        <div class="story-search__search-box">
+          <form class="simple_form story-search__form" novalidate="novalidate" action="/stories" accept-charset="UTF-8" method="get">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26px" height="26px" viewBox="0 0 26 26" version="1.1" class="story-search__img story-search__img--search">
+    <defs></defs>
+    <g id="Article-Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="search-enabled" transform="translate(-26.000000, -221.000000)" fill-rule="nonzero" fill="#303235">
+            <g id="Group" transform="translate(26.000000, 215.000000)">
+                <g id="noun_894550" transform="translate(0.000000, 6.000000)">
+                    <path d="M10.6990191,0.203520761 C4.92732516,0.203520761 0.205030179,4.8594567 0.205030179,10.5632484 C0.205030179,16.2670401 4.92732516,20.933779 10.6990191,20.933779 C12.9180608,20.933779 14.9731336,20.2316075 16.6674756,19.064923 L22.3407883,24.6606882 C23.0622502,25.3844649 24.2428238,25.3844649 24.9642857,24.6606882 C25.6857472,23.9477142 25.6857472,22.7918323 24.9642857,22.0788582 L19.2909726,16.4722904 C20.4824778,14.7870792 21.1820772,12.7561837 21.1820772,10.5632484 C21.1820772,4.8594567 16.4597819,0.203520761 10.6990191,0.203520761 Z M10.6990191,3.85481173 C14.4593652,3.85481173 17.4763872,6.8363391 17.4763872,10.5632484 C17.4763872,14.290158 14.4593652,17.2716854 10.6990191,17.2716854 C6.92774188,17.2716854 3.91072013,14.290158 3.91072013,10.5632484 C3.91072013,6.8363391 6.92774188,3.85481173 10.6990191,3.85481173 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+            <div class="input search required search_query"><input name="query" class="string search required story-search__input js-story-search" type="search" id="search_query" /></div>
+            <input type="submit" name="commit" value="Save Search" class="story-search__submit" data-disable-with="Save Search" />
+</form>        </div>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25px" height="25px" viewBox="0 0 25 25" version="1.1" class="story-search__img story-search__img--close js-story-search-close">
+    <defs></defs>
+    <g id="Article-Search" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+        <g id="search-enabled" transform="translate(-1542.000000, -218.000000)" fill="#000000">
+            <g id="close" transform="translate(1542.000000, 218.000000)">
+                <g id="noun_891472">
+                    <g id="Group" fill-rule="nonzero">
+                        <path d="M0.209285714,1.21928571 C-0.07,0.94 -0.0692857143,0.488571429 0.21,0.209285714 L0.21,0.209285714 C0.488571429,-0.07 0.940714286,-0.07 1.22,0.209285714 L1.22,0.209285714 L12.8378571,11.8264286 C13.1164286,12.1057143 13.1157143,12.5571429 12.8364286,12.8364286 L12.8364286,12.8364286 C12.5571429,13.115 12.1057143,13.115 11.8271429,12.8378571 L11.8271429,12.8378571 L0.209285714,1.21928571 L0.209285714,1.21928571 Z" id="Shape"></path>
+                        <path d="M1.22142857,24.4542857 C0.942142857,24.7335714 0.49,24.7321429 0.210714286,24.4528571 L0.210714286,24.4528571 C-0.0678571429,24.1735714 -0.0685714286,23.7221429 0.210714286,23.4428571 L0.210714286,23.4428571 L11.8285714,11.825 C12.1071429,11.5471429 12.5592857,11.5471429 12.8378571,11.8264286 L12.8378571,11.8264286 C13.1171429,12.1057143 13.1178571,12.5571429 12.8392857,12.8364286 L12.8392857,12.8364286 L1.22142857,24.4542857 L1.22142857,24.4542857 Z" id="Shape"></path>
+                    </g>
+                    <g id="Group" transform="translate(11.428571, 0.000000)" fill-rule="nonzero">
+                        <path d="M13.0271429,23.4435714 C13.3064286,23.7228571 13.3064286,24.1742857 13.0271429,24.4535714 L13.0271429,24.4535714 C12.7478571,24.7328571 12.2964286,24.7328571 12.0171429,24.4535714 L12.0171429,24.4535714 L0.398571429,12.8371429 C0.12,12.5578571 0.120714286,12.1064286 0.4,11.8271429 L0.4,11.8271429 C0.679285714,11.5478571 1.13071429,11.5478571 1.40928571,11.8257143 L1.40928571,11.8257143 L13.0271429,23.4435714 L13.0271429,23.4435714 Z" id="Shape"></path>
+                        <path d="M12.015,0.208571429 C12.2942857,-0.0707142857 12.7464286,-0.0692857143 13.0257143,0.21 L13.0257143,0.21 C13.3042857,0.489285714 13.305,0.940714286 13.0257143,1.22 L13.0257143,1.22 L1.40785714,12.8385714 C1.12928571,13.1157143 0.677142857,13.1157143 0.398571429,12.8371429 L0.398571429,12.8371429 C0.119285714,12.5578571 0.118571429,12.1064286 0.397142857,11.8271429 L0.397142857,11.8271429 L12.015,0.208571429 L12.015,0.208571429 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+
+    </div>
+</div>
+
+
+      <div id="cookies-consent-banner" class="cookies-consent">
+    <div class="cookies-consent__content">
+      <p>We use cookies on our site to give you the best experience possible. By continuing to browse the site, you agree to this use. For more information on how we use cookies, see our <a href='/thrive/privacy'>Privacy Policy</a>.</p>
+      <button id="cookies-consent-confirm">Continue</button>
+    </div>
+  </div>
+
+    <div class="mdl-layout__content">
+      <main class="app-layout__main app-layout__main--max-width" id="main">
+                
+
+
+<article class="story-view">
+  <header class="story-view__header">
+    <div class="story-meta">
+      <span class="story-meta__category">
+        <a href="/categories/work-smarter">Work Smarter</a>
+      </span>
+    </div>
+    <h1 class="story-view__title">
+      13 Mysterious Code Words Your Boss Uses — And What They Really Mean
+    </h1>
+    <h2 class="story-view__subtitle">
+      This is how to understand your boss&#39; communication style without driving yourself crazy 
+    </h2>
+    <ul class="story-view__author-byline story-author story-author--list">
+      <em>by</em>
+      <li class="story-author__author"><a href="/authors/4312-business-insider">Business Insider</a></li>
+    </ul>
+  </header>
+    <aside class="story-view__socials">
+      <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriveglobal.com%2Fstories%2F18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean"
+   target="_blank"
+   class="story-view__socials-link facebook"
+   data-social-network="Facebook">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="k4g5yiyi41950dxz3m288ywy73jq0v3 ovioe6gflxboqtg7924tewcjcnk0uwq"><title id="k4g5yiyi41950dxz3m288ywy73jq0v3">Share this story on Facebook</title><desc id="ovioe6gflxboqtg7924tewcjcnk0uwq">The Facebook logo</desc>
+  
+  <path d="M22.4,13.5c-0.4,0-0.8,0.4-0.8,1.1v2.2h3.9v3.3h-4v9.8h-3.7v-9.7h-3.3v-3.3h3.3V15c0-2.8,2-4.9,4.6-4.9h3.1v3.4H22.4z"></path>
+</svg>
+
+</a>
+
+<a href="https://twitter.com/share?text=How to Decode Confusing Phrases From Your Boss&amp;amp;url=https%3A%2F%2Fwww.thriveglobal.com%2Fstories%2F18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean"
+   target="_blank"
+   class="story-view__socials-link twitter"
+   data-social-network="Twitter">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="5h8dvoyk184gtnkhox8lrpwo5gyj4uf o8x971ps6tpl4j1nljjkkc46p860kz0"><title id="5h8dvoyk184gtnkhox8lrpwo5gyj4uf">Tweet this story</title><desc id="o8x971ps6tpl4j1nljjkkc46p860kz0">The twitter logo</desc>
+  
+  <path d="M29.8,15.5c0,0.2,0,0.4,0,0.6c0,6-4.6,12.9-12.9,12.9c-2.6,0-4.9-0.8-6.9-2c0.4,0,0.7,0.1,1.1,0.1c2.1,0,4.1-0.7,5.6-1.9   c-2,0-3.7-1.3-4.2-3.1C12.7,22,13,22,13.3,22c0.4,0,0.8-0.1,1.2-0.2c-2.1-0.4-3.6-2.2-3.6-4.4c0,0,0,0,0-0.1   c0.6,0.3,1.3,0.5,2.1,0.6c-1.2-0.8-2-2.2-2-3.8c0-0.8,0.2-1.6,0.6-2.3c2.2,2.7,5.6,4.5,9.3,4.7c-0.1-0.3-0.1-0.7-0.1-1   c0-2.5,2-4.5,4.5-4.5c1.3,0,2.5,0.5,3.3,1.4c1-0.2,2-0.6,2.9-1.1c-0.3,1.1-1.1,1.9-2,2.5c0.9-0.1,1.8-0.4,2.6-0.7   C31.4,14.1,30.7,14.9,29.8,15.5z"></path>
+</svg>
+
+</a>
+
+<a href="https://api.whatsapp.com/send?&amp;text=Check%20out%20this%20story%2C%20%22How%20to%20Decode%20Confusing%20Phrases%20From%20Your%20Boss%22%20from%20Thrive%20Global%3A%20https%3A%2F%2Fwww.thriveglobal.com%2Fstories%2F18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean"
+   target="_blank"
+   class="story-view__socials-link whatsapp"
+   data-social-network="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="br8j3g1j38xcs2tb7ccs827wsr9n612 kwpbdt37usutnkzmfpdq2hdfyh364yn"><title id="br8j3g1j38xcs2tb7ccs827wsr9n612">Share this story on WhatsApp</title><desc id="kwpbdt37usutnkzmfpdq2hdfyh364yn">The WhatsApp logo</desc>
+  
+  <path d="M7,32 L8.7656786,25.5802083 C7.67612826,23.7010417 7.10361718,21.5708333 7.10466382,19.3864583 C7.10780373,12.5572917 12.6916184,7 19.5523316,7 C22.8816876,7.00104167 26.0069492,8.29166667 28.3576985,10.6333333 C30.7074012,12.975 32.001046,16.0875 31.9999994,19.3979167 C31.9968595,26.228125 26.4130448,31.7854167 19.5523316,31.7854167 C17.4695216,31.784375 15.4170642,31.2645833 13.5990537,30.2770833 L7,32 Z M13.904672,28.034375 C15.6588376,29.0708333 17.3334587,29.6916667 19.548145,29.6927083 C25.2502298,29.6927083 29.89521,25.0739583 29.8983499,19.3958333 C29.9004432,13.70625 25.2774424,9.09375 19.5565181,9.09166667 C13.8502468,9.09166667 9.20840654,13.7104167 9.20631327,19.3875 C9.20526663,21.7052083 9.88767472,23.440625 11.0337435,25.25625 L9.98815198,29.05625 L13.904672,28.034375 Z M25.8227409,22.3427083 C25.7452897,22.2135417 25.5380553,22.1364583 25.2261571,21.98125 C24.9153056,21.8260417 23.3861672,21.0770833 23.100435,20.9739583 C22.8157494,20.8708333 22.6085151,20.81875 22.4002341,21.1291667 C22.1929997,21.4385417 21.5964159,22.1364583 21.4153475,22.3427083 C21.2342791,22.5489583 21.0521641,22.575 20.7413126,22.4197917 C20.430461,22.2645833 19.4277816,21.9385417 18.2398473,20.8833333 C17.3156658,20.0625 16.6908228,19.0489583 16.5097544,18.7385417 C16.328686,18.4291667 16.4909149,18.2614583 16.6458174,18.1072917 C16.7860669,17.96875 16.9566689,17.7458333 17.112618,17.5645833 C17.2706604,17.3854167 17.3219456,17.25625 17.4266095,17.0489583 C17.5302266,16.8427083 17.4789414,16.6614583 17.4004435,16.50625 C17.3219456,16.3520833 16.7002426,14.828125 16.4417229,14.2083333 C16.1884365,13.6052083 15.9320102,13.6864583 15.741522,13.6770833 L15.1449383,13.6666667 C14.9377039,13.6666667 14.6006864,13.74375 14.3160008,14.0541667 C14.0313152,14.3645833 13.2274971,15.1125 13.2274971,16.6364583 C13.2274971,18.1604167 14.3421668,19.6322917 14.4970692,19.8385417 C14.6530183,20.0447917 16.6897762,23.171875 19.8098046,24.5125 C20.551871,24.83125 21.1317086,25.021875 21.5828096,25.1645833 C22.328016,25.4 23.0062376,25.3666667 23.5421163,25.2875 C24.1397467,25.1989583 25.3821062,24.5385417 25.6416725,23.815625 C25.9012387,23.0916667 25.9012387,22.471875 25.8227409,22.3427083 L25.8227409,22.3427083 Z"></path>
+</svg>
+
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?url=https://www.thriveglobal.com/stories/18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean&amp;title=How to Decode Confusing Phrases From Your Boss&amp;summary=By Shana Lebowitz It can be hard to get used to a new boss&#39; communication style.To figure out the mea…"
+   target="_blank"
+   class="story-view__socials-link linkedin"
+   data-social-network="Linkedin">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="-8 -8 40 40" version="1.1" role="img" aria-labelledby="ppsx675sx0dufthacju8xwl2rwvnrqx joh1k0hybo2g85rbcus9x6qtub6d752"><title id="ppsx675sx0dufthacju8xwl2rwvnrqx">Share this story on Linkedin</title><desc id="joh1k0hybo2g85rbcus9x6qtub6d752">The Linkedin logo</desc>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-linkedin" fill-rule="nonzero" fill="#ffffff">
+            <path d="M19,0 L5,0 C2.239,0 0,2.239 0,5 L0,19 C0,21.761 2.239,24 5,24 L19,24 C21.762,24 24,21.761 24,19 L24,5 C24,2.239 21.762,0 19,0 Z M8,19 L5,19 L5,8 L8,8 L8,19 Z M6.5,6.732 C5.534,6.732 4.75,5.942 4.75,4.968 C4.75,3.994 5.534,3.204 6.5,3.204 C7.466,3.204 8.25,3.994 8.25,4.968 C8.25,5.942 7.467,6.732 6.5,6.732 Z M20,19 L17,19 L17,13.396 C17,10.028 13,10.283 13,13.396 L13,19 L10,19 L10,8 L13,8 L13,9.765 C14.396,7.179 20,6.988 20,12.241 L20,19 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
+
+</a>
+
+    </aside>
+  <figure class="story-view__featured-image">
+  <img alt="" src="https://s3.amazonaws.com/skinner-production/stories/featured_images/000/018/442/large/hunters-race-408744.jpg?1512589970" />
+    <figcaption class="story-view__image-caption">Courtesy of&nbsp;
+<a href="https://unsplash.com/photos/MYbhN8KaaEc">Hunters Race/Unsplash&nbsp;</a></figcaption>
+</figure>
+
+  <section class="story-view__body">
+    <p><i>By Shana Lebowitz&nbsp;</i></p><div><ul><li><strong>It can be hard to get used to a new boss' communication style.</strong></li><li><strong>To figure out the meaning of their vague comments, you have to consider the context of the conversation and your relationship with them.</strong></li><li><strong>We asked two workplace experts to decode some common confusing remarks from bosses — from "Not bad" to "Do you have the bandwidth?"</strong></li></ul><hr><p><br>It can take a while to get used to your boss' communication style. When they call your idea "interesting," are they saying it's the stupidest thing they've ever heard? Or simply mulling it over for a moment? You can drive yourself crazy trying to figure it out.</p><p>According to Michael Kerr, an international <a href="http://www.humoratwork.com/">business speaker</a> and author of "<a href="https://www.amazon.com/The-Humor-Advantage-Businesses-Laughing/dp/0968846122?tag=bisafetynet-20">The Humor Advantage</a>," understanding your boss' cryptic comments depends a lot on the context of the conversation and the relationship you have with them. Maybe you should take everything at face value, or maybe you really should read between the lines.</p><p>We asked Kerr and Lynn Taylor, a national workplace expert and the author of "<a href="https://www.amazon.com/Tame-Your-Terrible-Office-Tyrant/dp/0470457643/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1248186483&amp;sr=8-1&amp;tag=bisafetynet-20">Tame Your Terrible Office Tyrant: How to Manage Childish Boss Behavior and Thrive in Your Job,</a>" to parse some common confusing statements from bosses. Read on to learn how to speak manager-ese.</p><h3>'I trust you to make the right decision on this one'</h3></div><div data-slide="1"><p>On the one hand, this remark could mean your boss is giving you more autonomy and wants to empower you — "which are all good things," Kerr said.</p><p>On the other hand, Kerr added, it could mean they want you to work more independently and take more responsibility for your work than you have in the past.</p></div><div data-slide="2"><h3>'The timing for this just isn't good right now'</h3><p>Maybe this really isn't a great time to put your idea into action — because of financial or logistical constraints.</p><p>But, Kerr said, your boss may also be saying there will <em>never</em> be a good time for this idea: "I'm just kicking it down the field because I don't want to deal with it."</p><p>Alternatively, Kerr said, it might mean you didn't do a good job presenting the idea and you need to do a little more homework to sell your boss on its importance.</p></div><div data-slide="3"><h3>'Business is really slow this year'</h3><p>Translation, according to a <a href="https://www.psychologytoday.com/blog/tame-your-terrible-office-tyrant/201603/75-corporate-buzzwords-and-phrases-drive-us-crazy">Psychology Today article</a> Taylor wrote? "You're not getting a raise."&nbsp;</p></div><div data-slide="4"><h3>'You know how much is at stake here'</h3><p>The underlying sentiment here, according to Kerr, is "don't make me look bad." Your boss is probably feeling pressure from their managers — so they want you to be especially cautious on this assignment.</p></div><div data-slide="5"><h3>'Just make this go away'</h3><p>Again, your boss is probably stressed and overwhelmed with their own work, Kerr said. And they don't want the hassle of dealing with the situation themselves.</p><p>They may also be frustrated that you're not taking enough responsibility for your own decisions and actions.</p></div><div data-slide="6"><h3>'I need you to be a team player'</h3><p>Kerr said this comment could be a gentle reminder that collaboration is important. Maybe they're the kind of person who prioritizes everyone getting along over taking on bold new ideas.</p><p>It could also mean they "have reason to believe that perhaps you haven't been in a team player in the past."</p></div><div data-slide="7"><h3>'I'm not sure if I'll be able to sell that upstairs'</h3><p>"Upstairs" here refers to senior management. Kerr said what your boss probably means here is that <em>they're</em> not 100% sold on your idea and they're concerned about looking bad in front of their bosses.</p></div><div data-slide="8"><h3>'Do you have the bandwidth for this project?'</h3><p>Kerr said it's possible your boss is expressing concern that you're not setting your priorities properly. Specifically, "you're not making <em>their&nbsp;</em>priority <em>your</em> priority" — and you should be.</p><p>Alternatively, your boss could simply be checking in to see if you're overwhelmed with other assignments.</p></div><div data-slide="9"><h3>'Not bad'</h3><p>In short, if your boss says your assignment is "not bad," you probably have more work ahead of you, Taylor said.</p><p>Taylor said it's also important to remember that some bosses may deliberately withhold praise because they don't want you to start expecting something in return, like a raise or a promotion. So don't take it <em>too</em> personally.</p></div><div data-slide="10"><h3>'I hadn't thought of that'</h3><p>"This is VERY positive feedback, meaning you have come up with a virtual epiphany," Taylor wrote in an email.</p></div><div data-slide="11"><h3>'You did such a good job at X that I ...'</h3><p>You've impressed your boss to the point where they feel confident about giving you tougher assignments.</p><p>"You'll soon be working double hours," Taylor wrote in the <a href="https://www.psychologytoday.com/blog/tame-your-terrible-office-tyrant/201603/75-corporate-buzzwords-and-phrases-drive-us-crazy">Psychology Today article</a>.</p></div><div data-slide="12"><h3>'Where do you see yourself in five years?'</h3><p>Taylor said this question typically comes up during a performance review — and it can mean a few things. Either you're doing a great job and your boss wants to know: "Are we doing what we can to help you advance in the career you want?"</p><p>Or, if you've gotten some negative feedback lately, your boss may be trying to figure out if this role and this organization are the right fits for you. In that case, it's a "way to really define whether there's become a severe gap and a mismatch between you and the company."</p></div><div data-slide="13"><h3>'Do you like working here?'</h3><p>When your boss asks you this question, Kerr said, they're either genuinely checking in to make sure you're happy <em>or</em> they've heard about your negative attitude from coworkers. If in fact you don't like your work, that feeling might be more obvious than you think.</p><p class=""><em>Originally published at <a href="http://www.businessinsider.com/what-your-boss-means-2017-11/#i-need-you-to-be-a-team-player-6">www.businessinsider.com</a></em><br></p><p><b>More From Business Insider:</b></p><p><a href="http://www.businessinsider.com/how-successful-people-spend-holiday-weekends-2016-9">11 things unsuccessful people do over long weekends</a></p><p><a href="http://www.businessinsider.com/what-successful-do-after-getting-back-from-vacation-2017-7">8 things successful people do after getting back from vacation</a></p><p><a href="http://www.businessinsider.com/how-successful-people-spend-holiday-weekends-2016-6">14 things successful people do over 3-day weekends</a></p></div>
+    <time class="story-view__data story-meta__date">
+      <span>&mdash; Published on January 19, 2018</span>
+    </time>
+    <div class="story-view__tags">
+      <a href="/tags/relationships">Relationships</a>, <a href="/tags/performance">Performance</a>, <a href="/tags/corporate">Corporate</a>, <a href="/tags/career-advice">Career Advice</a>
+    </div>
+  </section>
+    <aside class="story-view__socials mobile-only">
+      <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fwww.thriveglobal.com%2Fstories%2F18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean"
+   target="_blank"
+   class="story-view__socials-link facebook"
+   data-social-network="Facebook">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="k4g5yiyi41950dxz3m288ywy73jq0v3 ovioe6gflxboqtg7924tewcjcnk0uwq"><title id="k4g5yiyi41950dxz3m288ywy73jq0v3">Share this story on Facebook</title><desc id="ovioe6gflxboqtg7924tewcjcnk0uwq">The Facebook logo</desc>
+  
+  <path d="M22.4,13.5c-0.4,0-0.8,0.4-0.8,1.1v2.2h3.9v3.3h-4v9.8h-3.7v-9.7h-3.3v-3.3h3.3V15c0-2.8,2-4.9,4.6-4.9h3.1v3.4H22.4z"></path>
+</svg>
+
+</a>
+
+<a href="https://twitter.com/share?text=How to Decode Confusing Phrases From Your Boss&amp;amp;url=https%3A%2F%2Fwww.thriveglobal.com%2Fstories%2F18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean"
+   target="_blank"
+   class="story-view__socials-link twitter"
+   data-social-network="Twitter">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="5h8dvoyk184gtnkhox8lrpwo5gyj4uf o8x971ps6tpl4j1nljjkkc46p860kz0"><title id="5h8dvoyk184gtnkhox8lrpwo5gyj4uf">Tweet this story</title><desc id="o8x971ps6tpl4j1nljjkkc46p860kz0">The twitter logo</desc>
+  
+  <path d="M29.8,15.5c0,0.2,0,0.4,0,0.6c0,6-4.6,12.9-12.9,12.9c-2.6,0-4.9-0.8-6.9-2c0.4,0,0.7,0.1,1.1,0.1c2.1,0,4.1-0.7,5.6-1.9   c-2,0-3.7-1.3-4.2-3.1C12.7,22,13,22,13.3,22c0.4,0,0.8-0.1,1.2-0.2c-2.1-0.4-3.6-2.2-3.6-4.4c0,0,0,0,0-0.1   c0.6,0.3,1.3,0.5,2.1,0.6c-1.2-0.8-2-2.2-2-3.8c0-0.8,0.2-1.6,0.6-2.3c2.2,2.7,5.6,4.5,9.3,4.7c-0.1-0.3-0.1-0.7-0.1-1   c0-2.5,2-4.5,4.5-4.5c1.3,0,2.5,0.5,3.3,1.4c1-0.2,2-0.6,2.9-1.1c-0.3,1.1-1.1,1.9-2,2.5c0.9-0.1,1.8-0.4,2.6-0.7   C31.4,14.1,30.7,14.9,29.8,15.5z"></path>
+</svg>
+
+</a>
+
+<a href="https://api.whatsapp.com/send?&amp;text=Check%20out%20this%20story%2C%20%22How%20to%20Decode%20Confusing%20Phrases%20From%20Your%20Boss%22%20from%20Thrive%20Global%3A%20https%3A%2F%2Fwww.thriveglobal.com%2Fstories%2F18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean"
+   target="_blank"
+   class="story-view__socials-link whatsapp"
+   data-social-network="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="br8j3g1j38xcs2tb7ccs827wsr9n612 kwpbdt37usutnkzmfpdq2hdfyh364yn"><title id="br8j3g1j38xcs2tb7ccs827wsr9n612">Share this story on WhatsApp</title><desc id="kwpbdt37usutnkzmfpdq2hdfyh364yn">The WhatsApp logo</desc>
+  
+  <path d="M7,32 L8.7656786,25.5802083 C7.67612826,23.7010417 7.10361718,21.5708333 7.10466382,19.3864583 C7.10780373,12.5572917 12.6916184,7 19.5523316,7 C22.8816876,7.00104167 26.0069492,8.29166667 28.3576985,10.6333333 C30.7074012,12.975 32.001046,16.0875 31.9999994,19.3979167 C31.9968595,26.228125 26.4130448,31.7854167 19.5523316,31.7854167 C17.4695216,31.784375 15.4170642,31.2645833 13.5990537,30.2770833 L7,32 Z M13.904672,28.034375 C15.6588376,29.0708333 17.3334587,29.6916667 19.548145,29.6927083 C25.2502298,29.6927083 29.89521,25.0739583 29.8983499,19.3958333 C29.9004432,13.70625 25.2774424,9.09375 19.5565181,9.09166667 C13.8502468,9.09166667 9.20840654,13.7104167 9.20631327,19.3875 C9.20526663,21.7052083 9.88767472,23.440625 11.0337435,25.25625 L9.98815198,29.05625 L13.904672,28.034375 Z M25.8227409,22.3427083 C25.7452897,22.2135417 25.5380553,22.1364583 25.2261571,21.98125 C24.9153056,21.8260417 23.3861672,21.0770833 23.100435,20.9739583 C22.8157494,20.8708333 22.6085151,20.81875 22.4002341,21.1291667 C22.1929997,21.4385417 21.5964159,22.1364583 21.4153475,22.3427083 C21.2342791,22.5489583 21.0521641,22.575 20.7413126,22.4197917 C20.430461,22.2645833 19.4277816,21.9385417 18.2398473,20.8833333 C17.3156658,20.0625 16.6908228,19.0489583 16.5097544,18.7385417 C16.328686,18.4291667 16.4909149,18.2614583 16.6458174,18.1072917 C16.7860669,17.96875 16.9566689,17.7458333 17.112618,17.5645833 C17.2706604,17.3854167 17.3219456,17.25625 17.4266095,17.0489583 C17.5302266,16.8427083 17.4789414,16.6614583 17.4004435,16.50625 C17.3219456,16.3520833 16.7002426,14.828125 16.4417229,14.2083333 C16.1884365,13.6052083 15.9320102,13.6864583 15.741522,13.6770833 L15.1449383,13.6666667 C14.9377039,13.6666667 14.6006864,13.74375 14.3160008,14.0541667 C14.0313152,14.3645833 13.2274971,15.1125 13.2274971,16.6364583 C13.2274971,18.1604167 14.3421668,19.6322917 14.4970692,19.8385417 C14.6530183,20.0447917 16.6897762,23.171875 19.8098046,24.5125 C20.551871,24.83125 21.1317086,25.021875 21.5828096,25.1645833 C22.328016,25.4 23.0062376,25.3666667 23.5421163,25.2875 C24.1397467,25.1989583 25.3821062,24.5385417 25.6416725,23.815625 C25.9012387,23.0916667 25.9012387,22.471875 25.8227409,22.3427083 L25.8227409,22.3427083 Z"></path>
+</svg>
+
+</a>
+
+<a href="https://www.linkedin.com/shareArticle?url=https://www.thriveglobal.com/stories/18442-13-mysterious-code-words-your-boss-uses-and-what-they-really-mean&amp;title=How to Decode Confusing Phrases From Your Boss&amp;summary=By Shana Lebowitz It can be hard to get used to a new boss&#39; communication style.To figure out the mea…"
+   target="_blank"
+   class="story-view__socials-link linkedin"
+   data-social-network="Linkedin">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="-8 -8 40 40" version="1.1" role="img" aria-labelledby="ppsx675sx0dufthacju8xwl2rwvnrqx joh1k0hybo2g85rbcus9x6qtub6d752"><title id="ppsx675sx0dufthacju8xwl2rwvnrqx">Share this story on Linkedin</title><desc id="joh1k0hybo2g85rbcus9x6qtub6d752">The Linkedin logo</desc>
+    
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon-linkedin" fill-rule="nonzero" fill="#ffffff">
+            <path d="M19,0 L5,0 C2.239,0 0,2.239 0,5 L0,19 C0,21.761 2.239,24 5,24 L19,24 C21.762,24 24,21.761 24,19 L24,5 C24,2.239 21.762,0 19,0 Z M8,19 L5,19 L5,8 L8,8 L8,19 Z M6.5,6.732 C5.534,6.732 4.75,5.942 4.75,4.968 C4.75,3.994 5.534,3.204 6.5,3.204 C7.466,3.204 8.25,3.994 8.25,4.968 C8.25,5.942 7.467,6.732 6.5,6.732 Z M20,19 L17,19 L17,13.396 C17,10.028 13,10.283 13,13.396 L13,19 L10,19 L10,8 L13,8 L13,9.765 C14.396,7.179 20,6.988 20,12.241 L20,19 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
+
+</a>
+
+    </aside>
+  <aside class="story-view__author-profile">
+    <section class="author-profile">
+  <div class="author-profile__headshot-container">
+    <img src="https://s3.amazonaws.com/skinner-production/authors/headshots/000/004/312/preview/Screen_Shot_2018-07-10_at_9.58.15_AM.png?1531231147" alt="Screen shot 2018 07 10 at 9.58.15 am" />
+  </div>
+  <h3 class="author-profile__name">
+    <a href="/authors/4312-business-insider">Business Insider</a>
+  </h3>
+  <div class="author-profile__bio">
+    <p>Business Insider is an American financial and business news website that also operates international editions in the UK, Australia, China, Germany, France, South Africa, India, Italy, Indonesia, Japan, Malaysia, Netherlands, Nordics, Poland, Spain and Singapore.</p>
+  </div>
+</section>
+
+  </aside>
+    <p class="story-view__disclaimer">
+      The Thrive Global Community welcomes voices from many spheres. We publish pieces written by outside contributors with a wide range of opinions, which don’t necessarily reflect our own. <a href=/stories/8845>Learn more</a> or join us as a community member!
+
+    </p>
+  <div id='div-gpt-ad-1495319429582-0' class='story-list-footer__dfp-ad-unit'>
+  <script>
+    googletag.cmd.push(function() {
+      googletag.pubads().setTargeting('category', 'Work Smarter');
+      googletag.display('div-gpt-ad-1495319429582-0');
+    });
+  </script>
+</div>
+</article>
+
+
+      </main>
+      <section class="newsletter-cta">
+    <div class="newsletter-cta__content">
+      <h2 class="newsletter-cta__title">
+        Sign up for the Thrive Global newsletter
+      </h2>
+      <form action="//thriveglobal.us14.list-manage.com/subscribe/post?u=a8c21155548bb09209142a6e7&amp;amp;id=0df7f8d52b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate requires-consent" target="_blank" novalidate>
+  <div class="input-with-attached-button">
+    <input class="input-with-attached-button__input" type="email" name="EMAIL" value="" placeholder="Enter Your Email" id="mce-EMAIL">
+
+    <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_a8c21155548bb09209142a6e7_0df7f8d52b" tabindex="-1" value="">
+    </div>
+
+    <button type="submit" class="input-with-attached-button__button requires-consent" disabled="disabled">
+      Submit
+    </button>
+  </div>
+  <div class="input-with-attached-button">
+    <label>
+      <input type="checkbox" id="newsletter-consent" class="provides-consent" />
+      I agree to allow Thrive Global to use and store my email
+    </label>
+  </div>
+</form>
+
+    </div>
+  </section>
+<footer class="app-footer">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757.4 387.5" class="app-footer__logo">
+  <title>Thrive Global</title>
+  <g class="logo__thrive-lettering" fill="#111">
+    <polygon points="225,188.3 159.9,188.3 159.9,193.7 225,193.7 225,253.4 230.6,253.4 230.6,132.2 225,132.2"></polygon>
+    <rect x="130.2" y="132.2" width="5.6" height="121.2"></rect>
+    <rect y="132.2" width="94.8" height="5.4"></rect>
+    <rect x="44.6" y="161.1" width="5.6" height="92.3"></rect>
+    <path d="M331,213.6c23,0,41.8-18.3,41.8-40.7s-18.8-40.7-41.8-40.7h-52.1v121.2h5.6V137.6H331 c20.1,0,36.3,15.7,36.3,35.3c0,19.5-16.2,35.3-36.3,35.3h-23.3l57.6,45.2h9.3l-51.5-39.8H331z"></path>
+    <rect x="631.3" y="188.3" width="55.8" height="5.4"></rect>
+    <polygon points="601.5,132.2 601.5,253.4 687.1,253.4 687.1,248 607.1,248 607.1,137.6 687.1,137.6 687.1,132.2"></polygon>
+    <rect x="411.9" y="132.2" width="5.6" height="121.2"></rect>
+    <polygon points="510.4,244.3 457,132.2 450.9,132.2 509.5,255.2 511.3,255.2 569.9,132.2 563.7,132.2 "></polygon>
+  </g>
+  <g class="logo__global-lettering" fill="#111">
+    <path d="M207.1,332.9h62.2c-0.8,23.7-19.9,42.1-43.9,42.1c-24.6,0-43.9-19.1-43.9-43.4s19.3-43.4,43.9-43.4 c13.5-0.1,26.3,6,34.7,16.5l1.1,1.4v-8.3l-0.2-0.2c-9.3-9.6-22.2-15-35.7-14.9c-27.3,0-49.5,21.9-49.5,48.8 c0,26.9,22.2,48.8,49.5,48.8c27.3,0,49.5-21.9,49.5-48.8v-4.1h-67.8V332.9z"></path>
+    <polygon points="302.1,284.1 296.5,284.1 296.5,379 361,379 361,373.6 302.1,373.6"></polygon>
+    <path d="M539.8,329.1c8.6-3.8,13.8-11.5,13.8-20.6c0-13.4-11.2-24.4-25-24.4h-44V379h50.6c14.7,0,26.7-11.6,26.7-25.8 C562,340.8,552.8,331,539.8,329.1z M535.5,373.6h-45.3v-84h38.4c10.7,0,19.5,8.5,19.5,19s-8.7,19-19.5,19l-14.3-0.1v5.4h21.2 c11.5,0,20.9,9.1,20.9,20.4S547,373.6,535.5,373.6z"></path>
+    <polygon points="698.5,373.6 698.5,284.1 692.9,284.1 692.9,379 757.4,379 757.4,373.6"></polygon>
+    <polygon points="622,282.7 576.2,379 582.3,379 623.1,293.2 650,349.8 621.8,349.8 619.2,355.2 652.6,355.2 663.8,378.6 664,379 670.1,379 624.3,282.7"></polygon>
+  </g>
+  <g class="logo__leaves" fill="#71cbd2">
+    <path d="M405.8,75.3c0,0.5-0.2,1-0.4,1.4l6.9,7.1c0.3-0.3,0.7-0.6,1.1-0.7V47.7c-0.8-0.4-1.5-1.1-1.6-2L398,31.5 c-0.3,0.1-0.5,0.2-0.8,0.2c-1.5,0-2.8-1.2-2.8-2.8c0,0,0,0,0,0c0-0.3,0.1-0.6,0.2-0.9l-14.8-15.1c-6.9,6-12,13.6-15.1,22.1l37,38 c0.4-0.3,0.9-0.4,1.4-0.4C404.6,72.6,405.8,73.8,405.8,75.3z M416.4,43.2l30.8-31.6c-9.1-7.3-20.3-11.3-32-11.5v42.5 C415.7,42.6,416.1,42.8,416.4,43.2z M399.9,28.9c0,0.5-0.2,1.1-0.5,1.5l12.8,13.1c0.3-0.4,0.7-0.8,1.2-1V0 c-11.7,0.2-23.1,4.3-32.2,11.7l14.5,14.9c0.4-0.3,0.9-0.4,1.4-0.5C398.7,26.1,399.9,27.4,399.9,28.9z M415.2,47.7v35.4 c0.4,0.2,0.8,0.4,1.1,0.8l18.9-19.4c-0.3-0.4-0.4-0.9-0.4-1.4c0-1.5,1.2-2.8,2.8-2.8l0,0c0.5,0,0.9,0.1,1.3,0.4l25-25.7 c-3.1-8.6-8.3-16.3-15.3-22.3L417.2,45c0,0,0,0.1,0,0.1C417.2,46.3,416.4,47.4,415.2,47.7z M411.5,85.7L411.5,85.7l-7.5-7.8 c-0.3,0.1-0.6,0.2-0.9,0.2c-1.5,0-2.8-1.2-2.8-2.7c0-0.4,0.1-0.7,0.2-1.1L364,36.9c-1.6,5.1-2.4,10.4-2.4,15.8 c0,28.5,36.6,66.3,51.8,67.8V88.3C412.3,87.9,411.5,86.9,411.5,85.7z M464.6,36.9L440.2,62c0.6,1.4,0,3-1.4,3.6 c-0.7,0.3-1.5,0.3-2.1,0L417,85.8c0,1.1-0.8,2.1-1.8,2.5v32.2c14.2-1.6,51.8-39.3,51.8-67.8C467,47.3,466.2,42,464.6,36.9z"></path>
+    <path d="M422.8,312.1c0-0.5,0.2-1,0.4-1.4l-6.9-7c-0.3,0.3-0.7,0.6-1.1,0.7v35.4c0.8,0.4,1.5,1.1,1.6,2l13.8,14.2 c0.3-0.1,0.5-0.2,0.8-0.2c1.5,0,2.8,1.2,2.8,2.8c0,0,0,0,0,0c0,0.3-0.1,0.6-0.2,0.9l14.7,15.1c6.8-5.9,12-13.6,15.1-22.1l-37-38 c-0.4,0.3-0.9,0.4-1.4,0.4C424,314.9,422.8,313.7,422.8,312.1z M412.2,344.3L381.4,376c9.1,7.3,20.3,11.3,32,11.5V345 C413,344.9,412.5,344.7,412.2,344.3z M428.7,358.6c0-0.5,0.2-1.1,0.5-1.5L416.4,344c-0.3,0.4-0.7,0.8-1.2,1v42.5 c11.7-0.2,23.1-4.3,32.2-11.7l-14.5-14.9c-0.4,0.3-0.9,0.4-1.4,0.5C429.9,361.4,428.7,360.1,428.7,358.6 C428.7,358.6,428.7,358.6,428.7,358.6z M413.4,339.8v-35.4c-0.4-0.2-0.8-0.4-1.1-0.8L393.4,323c0.3,0.4,0.4,0.9,0.4,1.4 c0,1.5-1.2,2.8-2.8,2.8c0,0,0,0,0,0c-0.5,0-0.9-0.1-1.3-0.4l-25,25.7c3.1,8.6,8.3,16.3,15.3,22.3l31.4-32.3c0,0,0-0.1,0-0.1 C411.4,341.2,412.2,340.1,413.4,339.8z M417.1,301.8L417.1,301.8l7.5,7.7c0.3-0.1,0.6-0.2,0.9-0.2c1.5,0,2.8,1.2,2.8,2.7 c0,0.4-0.1,0.7-0.2,1.1l36.4,37.4c1.6-5.1,2.4-10.4,2.4-15.8c0-28.5-36.6-66.3-51.8-67.8v32.2C416.4,299.5,417.1,300.6,417.1,301.8 z M364,350.6l24.5-25.1c-0.6-1.4,0-3,1.4-3.6c0.7-0.3,1.5-0.3,2.1,0l19.5-20.1c0-1.1,0.8-2.1,1.8-2.5V267 c-14.2,1.6-51.8,39.4-51.8,67.8C361.6,340.2,362.4,345.5,364,350.6z"></path>
+  </g>
+</svg>
+
+  <blockquote class="app-footer__quote app-footer__quote--larger-font">
+    <span>&ldquo;</span>
+    People look for retreats for themselves, in the country, by the coast, or in the hills . . . There is nowhere that a person can find a more peaceful and trouble-free retreat than in his own mind. . . . So constantly give yourself this retreat, and renew yourself.
+    <span>&rdquo;</span>
+  </blockquote>
+  <p class="app-footer__quote-attribution">
+    &mdash; Marcus Aurelius
+  </p>
+  <nav class="app-footer__social-nav">
+    <ul>
+      <li class="app-footer__social-nav-item">
+        <a href="https://www.facebook.com/thriveglbl/" target ="_blank" rel="noopener noreferrer" class="app-footer__social-nav-link facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="g17t014yrwtmrghwtml950v94j21f28 ovioe6gflxboqtg7924tewcjcnk0uwq"><title id="g17t014yrwtmrghwtml950v94j21f28">Like Thrive Global on Facebook</title><desc id="ovioe6gflxboqtg7924tewcjcnk0uwq">The Facebook logo</desc>
+  
+  <path d="M22.4,13.5c-0.4,0-0.8,0.4-0.8,1.1v2.2h3.9v3.3h-4v9.8h-3.7v-9.7h-3.3v-3.3h3.3V15c0-2.8,2-4.9,4.6-4.9h3.1v3.4H22.4z"></path>
+</svg>
+
+        </a>
+      </li>
+      <li class="app-footer__social-nav-item">
+        <a href="https://twitter.com/thrive" target ="_blank" rel="noopener noreferrer" class="app-footer__social-nav-link twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="40px" viewBox="0 0 40 40" role="img" aria-labelledby="dcz3nu41fcsj65qhip5opjspi2zkt1f o8x971ps6tpl4j1nljjkkc46p860kz0"><title id="dcz3nu41fcsj65qhip5opjspi2zkt1f">Follow Thrive Global on Twitter</title><desc id="o8x971ps6tpl4j1nljjkkc46p860kz0">The twitter logo</desc>
+  
+  <path d="M29.8,15.5c0,0.2,0,0.4,0,0.6c0,6-4.6,12.9-12.9,12.9c-2.6,0-4.9-0.8-6.9-2c0.4,0,0.7,0.1,1.1,0.1c2.1,0,4.1-0.7,5.6-1.9   c-2,0-3.7-1.3-4.2-3.1C12.7,22,13,22,13.3,22c0.4,0,0.8-0.1,1.2-0.2c-2.1-0.4-3.6-2.2-3.6-4.4c0,0,0,0,0-0.1   c0.6,0.3,1.3,0.5,2.1,0.6c-1.2-0.8-2-2.2-2-3.8c0-0.8,0.2-1.6,0.6-2.3c2.2,2.7,5.6,4.5,9.3,4.7c-0.1-0.3-0.1-0.7-0.1-1   c0-2.5,2-4.5,4.5-4.5c1.3,0,2.5,0.5,3.3,1.4c1-0.2,2-0.6,2.9-1.1c-0.3,1.1-1.1,1.9-2,2.5c0.9-0.1,1.8-0.4,2.6-0.7   C31.4,14.1,30.7,14.9,29.8,15.5z"></path>
+</svg>
+
+        </a>
+      </li>
+      <li class="app-footer__social-nav-item">
+        <a href="https://www.instagram.com/thrive/" target ="_blank" rel="noopener noreferrer" class="app-footer__social-nav-link instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-labelledby="tdg2dj1hvfge5npti95x9bhmmaezsm3 gx7bfvhouyjilr0vnh5h11n2exidoap"><title id="tdg2dj1hvfge5npti95x9bhmmaezsm3">Follow Thrive Global on Instagram</title><desc id="gx7bfvhouyjilr0vnh5h11n2exidoap">The Instagram logo</desc>
+  
+  <path d="M31.2,15.4c0-0.9-0.2-1.9-0.5-2.7c-0.3-0.8-0.7-1.4-1.3-2c-0.6-0.6-1.2-1-2-1.3c-0.9-0.3-1.8-0.5-2.7-0.5   c-1.2-0.1-1.6-0.1-4.6-0.1s-3.4,0-4.6,0.1c-0.9,0-1.9,0.2-2.7,0.5c-0.8,0.3-1.4,0.7-2,1.3c-0.6,0.6-1,1.2-1.3,2   c-0.3,0.9-0.5,1.8-0.5,2.7c-0.1,1.2-0.1,1.6-0.1,4.6s0,3.4,0.1,4.6c0,0.9,0.2,1.9,0.5,2.7c0.3,0.8,0.7,1.4,1.3,2   c0.6,0.6,1.2,1,2,1.3c0.9,0.3,1.8,0.5,2.7,0.5c1.2,0.1,1.6,0.1,4.6,0.1s3.4,0,4.6-0.1c0.9,0,1.9-0.2,2.7-0.5   c1.5-0.6,2.7-1.8,3.3-3.3c0.3-0.9,0.5-1.8,0.5-2.7c0.1-1.2,0.1-1.6,0.1-4.6S31.2,16.6,31.2,15.4z M29.2,24.6c0,0.7-0.1,1.4-0.4,2.1   c-0.4,1-1.2,1.8-2.1,2.1c-0.7,0.2-1.4,0.4-2.1,0.4c-1.2,0.1-1.5,0.1-4.6,0.1s-3.4,0-4.6-0.1c-0.7,0-1.4-0.1-2.1-0.4   c-0.5-0.2-0.9-0.5-1.3-0.8c-0.4-0.4-0.7-0.8-0.8-1.3c-0.2-0.7-0.4-1.4-0.4-2.1c-0.1-1.2-0.1-1.5-0.1-4.6s0-3.4,0.1-4.6   c0-0.7,0.1-1.4,0.4-2.1c0.2-0.5,0.5-0.9,0.8-1.3c0.4-0.4,0.8-0.7,1.3-0.8c0.7-0.2,1.4-0.4,2.1-0.4c1.2-0.1,1.5-0.1,4.6-0.1   s3.4,0,4.6,0.1c0.7,0,1.4,0.1,2.1,0.4c0.5,0.2,0.9,0.5,1.3,0.8c0.4,0.4,0.7,0.8,0.8,1.3c0.2,0.7,0.4,1.4,0.4,2.1   c0.1,1.2,0.1,1.5,0.1,4.6S29.2,23.4,29.2,24.6z M20,14.2c-3.2,0-5.8,2.6-5.8,5.8s2.6,5.8,5.8,5.8s5.8-2.6,5.8-5.8   C25.8,16.8,23.2,14.2,20,14.2z M20,23.8c-2.1,0-3.8-1.7-3.8-3.8s1.7-3.8,3.8-3.8s3.8,1.7,3.8,3.8S22.1,23.8,20,23.8z M27.4,14   c0,0.7-0.6,1.4-1.4,1.4s-1.4-0.6-1.4-1.4s0.6-1.4,1.4-1.4l0,0C26.8,12.6,27.4,13.2,27.4,14z"></path>
+</svg>
+
+        </a>
+      </li>
+      <li class="app-footer__social-nav-item">
+        <a href="https://journal.thriveglobal.com/@thriveglobal" target ="_blank" rel="noopener noreferrer" class="app-footer__social-nav-link medium">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-labelledby="nlcrpslb4rd63nl3mx8ma1ugemg19n1 50xy6n2cpawvsms62sgn7azi3qg0ap2"><title id="nlcrpslb4rd63nl3mx8ma1ugemg19n1">Follow Thrive Global on Medium</title><desc id="50xy6n2cpawvsms62sgn7azi3qg0ap2">The Medium logo</desc>
+  
+  <path d="M16.6,14v14.8c0,0.4-0.2,0.7-0.7,0.7c-0.2,0-0.3,0-0.4-0.1l-5.9-2.9c-0.4-0.2-0.6-0.7-0.6-1V11.1c0-0.3,0.2-0.6,0.5-0.6   c0.2,0,0.4,0.1,0.6,0.2L16.6,14L16.6,14L16.6,14z M17.4,15.3l6.7,10.8l-6.7-3.4V15.3z M31.6,15.5v13.3c0,0.4-0.3,0.7-0.7,0.7   c-0.2,0-0.4-0.1-0.6-0.2l-5.5-2.8L31.6,15.5z M31.6,14c0,0.1-6.5,10.6-7,11.4l-4.9-7.9l4.1-6.6c0.1-0.2,0.4-0.4,0.7-0.4   c0.1,0,0.2,0,0.3,0.1L31.6,14C31.6,13.9,31.6,14,31.6,14L31.6,14z"></path>
+</svg>
+
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <nav class="app-footer__nav">
+    <ul>
+      <li class="app-footer__nav-item">
+        <a href="" class="app-footer__nav-link">
+          <a class="app-footer__nav-link" href="/about">About Us</a>
+        </a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/careers">Careers</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/contact">Contact</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/about/corporate">Partnerships - Corporate</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/about/content">Partnerships - Media</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/about/commerce">Partnerships - Commerce</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/press">Press</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a href="" class="app-footer__nav-link">
+          <a class="app-footer__nav-link" href="/team">Team</a>
+        </a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/thrive/privacy">Privacy</a>
+      </li>
+      <li class="app-footer__nav-item">
+        <a class="app-footer__nav-link" href="/thrive/terms">Terms</a>
+      </li>
+    </ul>
+    <p class="app-footer__copyright">
+      Thrive Global
+      &copy;
+      2018
+    </p>
+  </nav>
+  <!-- Quantcast Tag -->
+  <script type="text/javascript">
+    var _qevents = _qevents || [];
+
+    (function() {
+      var elem = document.createElement('script');
+      elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+      elem.async = true;
+      elem.type = "text/javascript";
+      var scpt = document.getElementsByTagName('script')[0];
+      scpt.parentNode.insertBefore(elem, scpt);
+    })();
+
+    _qevents.push({
+      qacct:"p-h85a9tr3pzvDH"
+    });
+  </script>
+
+  <noscript>
+    <div style="display:none;">
+      <img src="//pixel.quantserve.com/pixel/p-h85a9tr3pzvDH.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+  </noscript>
+<!-- End Quantcast tag -->
+
+</footer>
+
+    </div>
+    <script src="https://www.thriveglobal.com/assets/application-1066cc8ca1c8f1dd6dc5a37cd2a9288e7dba38d53cd11317d3de97b59dbf4e60.js"></script>
+
+
+
+
+    
+  </div>
+    <!-- START Parse.ly Include: Standard -->
+    <div id="parsely-root" style="display: none">
+      <span id="parsely-cfg" data-parsely-site="thriveglobal.com"></span>
+    </div>
+    <script>
+      (function(s, p, d) {
+        var h=d.location.protocol, i=p+"-"+s,
+          e=d.getElementById(i), r=d.getElementById(p+"-root"),
+          u=h==="https:"?"d1z2jf7jlzjs58.cloudfront.net"
+            :"static."+p+".com";
+        if (e) return;
+        e = d.createElement(s); e.id = i; e.async = true;
+        e.src = h+"//"+u+"/p.js"; r.appendChild(e);
+      })("script", "parsely", document);
+    </script>
+  <!-- END Parse.ly Include: Standard -->
+
+    <!-- START Pingdom -->
+      <script src="//rum-static.pingdom.net/pa-5aa1c28646534f0007000447.js" async></script>
+    <!-- END Pingdom -->
+
+  <!-- DO NOT MODIFY -->
+<!-- Quora Pixel Code (JS Helper) -->
+    <script>
+!function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
+  qp('init', 'f833126233ba4277a8023558835708c1');
+  qp('track', 'ViewContent');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/f833126233ba4277a8023558835708c1/pixel?tag=ViewContent&noscript=1"/></noscript>
+<!-- End of Quora Pixel Code -->
+
+</body>
+</html>
