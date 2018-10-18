@@ -331,7 +331,35 @@ input[type="text"]:focus{
 	}
 	.header-img-rcom{
 		margin-left: 25%;
-		/* color: black; */
+
 	}
 
 /* end style Recommendations */
+
+
+/* start style another Recommendation */
+.img-another-recom{
+	height: 300px;
+	width: 100%;
+}
+.cont-anoth-reco{
+	padding-left: 0px;
+	margin-top: 8px;
+}
+/* end style another Recommendation */
+
+
+/* start style footer */
+  .footer{
+		margin-top: 70px;
+	}
+	.header-footer{
+		background-color:#c6c6c6;
+		height: 30px;
+		padding-left: ;
+		text-align: center;
+	}
+	.body-footer{
+		background-color: #e8e8e8;
+	}
+/* End style footer */
