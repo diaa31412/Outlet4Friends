@@ -330,8 +330,12 @@ input[type="text"]:focus{
 		width: 100%;
 	}
 	.header-img-rcom{
-		margin-left: 25%;
 
+		text-align: center;
+
+	}
+	.detail-line{
+		text-align: center;
 	}
 
 /* end style Recommendations */
