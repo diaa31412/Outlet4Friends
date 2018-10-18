@@ -422,4 +422,48 @@ input[type="text"]:focus{
 	.einloggen{
 		margin-top: -14px;
 	}
+	.btn-primary{
+		background-color: orange;
+		text-align: center;
+		margin-bottom: -10px;
+		height: 30px;
+		width: 100px;
+		margin-left: 130px;
+	}
+	.btn-primary:hover{
+		background-color: orange;
+
+	}
+	.btn-primary:active{
+	background-color: orange !important;
+
+	}
+	.reg{
+		margin-top: 5px;
+		background-color: #e8e8e8;
+	}
+	.reg-btn{
+		margin-left: 10px;
+	}
+	.body-footer-2{
+		background-color: #e8e8e8;
+		padding-left: 25px;
+		padding-top: 8px;
+	}
+	.body-footer-2 span{
+		font-weight: bold;
+		font-size: 11px;
+	}
+	.body-footer-2 p{
+		font-weight: bold;
+		font-size: 11px;
+	}
+	.right-span{
+		float: right;
+		margin-top: -35px;
+	}
+	.tail-footer{
+		text-align: center;
+		padding-left: 42%;
+	}
 /* End style footer */
